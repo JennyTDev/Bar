@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,6 +26,10 @@ public abstract class Animal {
 	
 	public String nom;
 	public String sexe;
+	
+	@ManyToOne
+	@JoinColumn(name="id_client", referencedColumnName = "id")
+	public Client client;
 	
 
 }
