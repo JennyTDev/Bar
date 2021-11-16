@@ -7,5 +7,6 @@ public class Client {
 	
 	private Long idClient;
 	private String nom;
+	private int telephone;
 
 }
