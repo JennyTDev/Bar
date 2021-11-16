@@ -1,5 +1,7 @@
 package com.example.bar.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,16 +11,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Client {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id;
-	public String nom;
-	public String telephone;
+public class Gardiennage {
 
+
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		public Long id;
+		
+		public Date dateDebut;
+		public Date dateFin;
+		public Float tarifHeure;
+	
 }
