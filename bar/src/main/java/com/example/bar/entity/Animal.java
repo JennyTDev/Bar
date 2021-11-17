@@ -21,14 +21,14 @@ import lombok.NoArgsConstructor;
 public abstract class Animal {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	public Long id;
 	
 	public String nom;
 	public String sexe;
 	
 	@ManyToOne
-	@JoinColumn(name="id_client", referencedColumnName = "id")
+	
 	public Client proprietaire;
 	
 

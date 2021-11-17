@@ -1,11 +1,16 @@
 spring:
+  jpa:
+    defer-datasource-initialization: true
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
   datasource:
+    initialization-mode: always
+    platform: postgres
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: example
-    driver-class-name: org.postgresql.Driver
-    initialization-mode: always
-  jpa.hibernate.ddl-auto: create-drop
-
+    driverClassName: org.postgresql.Driver
 
     

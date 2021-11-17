@@ -34,7 +34,7 @@ public class Gardiennage {
 		@JoinColumn(name="id_client", referencedColumnName = "id")
 		public Client client;
 		
-		@OneToMany(mappedBy="gardiennage")
+		@OneToMany
 		public List<Animal> listeAnimaux;
 		
 	

@@ -28,7 +28,7 @@ public class Client {
 	public String nom;
 	public String telephone;
 
-	@OneToMany(mappedBy="client")
+	@OneToMany(mappedBy="proprietaire")
 	public List<Animal> listeAnimaux;
 	
 
