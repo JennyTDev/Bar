@@ -28,7 +28,6 @@ public abstract class Animal {
 	public String sexe;
 	
 	@ManyToOne
-	
 	public Client proprietaire;
 	
 
