@@ -31,7 +31,5 @@ public class Client {
 	@OneToMany(mappedBy="client")
 	public List<Animal> listeAnimaux;
 	
-	@JsonIgnore
-	@ManyToOne(cascade = CascadeType.ALL)
-	public Gardiennage gardiennage;
+
 }

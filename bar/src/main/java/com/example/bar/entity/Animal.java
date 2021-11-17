@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 public abstract class Animal {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.TABLE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long id;
 	
 	public String nom;
@@ -29,7 +29,7 @@ public abstract class Animal {
 	
 	@ManyToOne
 	@JoinColumn(name="id_client", referencedColumnName = "id")
-	public Client client;
+	public Client proprietaire;
 	
 
 }
