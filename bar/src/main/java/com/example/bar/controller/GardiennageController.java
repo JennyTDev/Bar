@@ -22,7 +22,6 @@ import com.example.bar.service.GardiennageService;
 public class GardiennageController {
 	
 
-	//pas de sieste 
 	@Autowired
 	private GardiennageService gardiennageService;
 	
