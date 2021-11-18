@@ -14,7 +14,7 @@ import lombok.Data;
 @Service
 public class ChatService {
 
-	
+	@Autowired
 	private ChatRepository chatRepository;
 	
 	public Chat createChat(Chat chat) {

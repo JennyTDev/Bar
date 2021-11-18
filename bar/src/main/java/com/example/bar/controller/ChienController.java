@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bar.entity.Chien;
@@ -15,36 +16,36 @@ import com.example.bar.service.ChienService;
 
 
 @RestController
-
+@RequestMapping("/Bar")
 public class ChienController {
 	
 	@Autowired
 	private ChienService chienService;
 	
 	
-	@PostMapping("/Bar/Chien/ajouterChien")
+	@PostMapping("/Chiens")
 	public Chien CreateClient(Chien ch)
 	{
 		return chienService.saveClient(ch);
 	}
-	@PutMapping("/Bar/Chien/modifierChien")
+	@PutMapping("/Chiens")
 	public Chien UpdateClient(Chien ch) {
 		return chienService.updateChien(ch);
 	}
-	@DeleteMapping("/Bar/Chien/supprimerChien")
+	@DeleteMapping("/Chiens")
 	public void deleteClient(Chien ch) {
 		chienService.deleteChien(ch);
 	}
-	@DeleteMapping("/Bar/Chien/supprimerChienById/{id}")
+	@DeleteMapping("/Chiens/{id}")
 	public void deleteChienById (@PathVariable Long id) {
 		chienService.deleteChienById(id);
 	}
-	@GetMapping("/Bar/Chien/{id}")
+	@GetMapping("/Chiens/{id}")
 	public Chien getById(@PathVariable Long id) {
 		return chienService.getChien(id);
 	}
 	
-	@GetMapping("/Bar/Chiens")
+	@GetMapping("/Chiens")
 	public List<Chien>GetAllChiens(){
 		
 		return chienService.getAllChien();

@@ -14,7 +14,7 @@ import lombok.Data;
 @Service
 public class ChienService {
 	
-
+	@Autowired
 	private ChienRepository chienRepository;
 	
 

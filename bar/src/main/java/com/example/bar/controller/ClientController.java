@@ -8,39 +8,41 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bar.entity.Client;
 import com.example.bar.service.ClientService;
 
 @RestController
+@RequestMapping("/Bar")
 public class ClientController {
 	@Autowired
 	private ClientService clientService;
 	
-	@PostMapping("/Bar/Client/ajouterClient")
+	@PostMapping("Clients")
 	public Client CreateClient(Client c)
 	{
 		return clientService.saveClient(c);
 	}
-	@PutMapping("/Bar/Client/modifierClient")
+	@PutMapping("/Clients")
 	public Client UpdateClient(Client c) {
 		return clientService.update(c);
 	}
-	@DeleteMapping("/Bar/Client/supprimerClient")
+	@DeleteMapping("/Clients")
 	public void deleteClient(Client c) {
 		 clientService.deleteClient(c);
 	}
-	@DeleteMapping("/Bar/Client/supprimerClientbyId/{id}")
+	@DeleteMapping("/Clients/{id}")
 	public void deleteById (@PathVariable Long id) {
 		clientService.deleteClientById(id);
 	}
 	
-	@GetMapping("/Bar/Client/afficherClientbyId/{id}")
+	@GetMapping("/Clients/{id}")
 	public Client getById(@PathVariable Long id) {
 		return clientService.getClient(id);
 	}
-	@GetMapping("/Bar/Clients")
+	@GetMapping("/Clients")
 	public List<Client>GetAllClients(){
 		
 		return clientService.getAllClient();
