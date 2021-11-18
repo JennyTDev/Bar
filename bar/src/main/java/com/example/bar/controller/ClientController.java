@@ -20,7 +20,7 @@ public class ClientController {
 	@Autowired
 	private ClientService clientService;
 	
-	@PostMapping("Clients")
+	@PostMapping("/Clients")
 	public Client CreateClient(Client c)
 	{
 		return clientService.saveClient(c);
