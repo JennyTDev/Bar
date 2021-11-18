@@ -21,8 +21,8 @@ import com.example.bar.service.GardiennageService;
 @RestController
 public class GardiennageController {
 	
-	//coucou Issam ! bientôt la sieste?
 
+	//pas de sieste 
 	@Autowired
 	private GardiennageService gardiennageService;
 	
