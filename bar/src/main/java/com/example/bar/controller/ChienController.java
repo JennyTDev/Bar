@@ -14,13 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.bar.entity.Chien;
 import com.example.bar.service.ChienService;
 
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/Bar")
 public class ChienController {
 	
-	@Autowired
-	private ChienService chienService;
+	
+	private final ChienService chienService;
 	
 	
 	@PostMapping("/Chiens")

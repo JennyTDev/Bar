@@ -9,14 +9,16 @@ import com.example.bar.entity.Client;
 import com.example.bar.repository.ClientRepository;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 
  
 @Data
 @Service
+@RequiredArgsConstructor
 public  class  ClientService  {
-	@Autowired
-	private ClientRepository clientRepository;
+	
+	private final ClientRepository clientRepository;
 	
 	public Client saveClient(Client c) {
 		return clientRepository.save(c);

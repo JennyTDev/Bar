@@ -9,13 +9,15 @@ import com.example.bar.entity.Chien;
 import com.example.bar.repository.ChienRepository;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Data
 @Service
+@RequiredArgsConstructor
 public class ChienService {
 	
-	@Autowired
-	private ChienRepository chienRepository;
+	
+	private final ChienRepository chienRepository;
 	
 
 	public Chien saveClient(Chien ch) {

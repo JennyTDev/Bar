@@ -13,12 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bar.entity.Client;
 import com.example.bar.service.ClientService;
+
+import lombok.RequiredArgsConstructor;
 //test
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/Bar")
 public class ClientController {
-	@Autowired
-	private ClientService clientService;
+	
+	private final ClientService clientService;
 	
 	@PostMapping("/Clients")
 	public Client CreateClient(Client c)
