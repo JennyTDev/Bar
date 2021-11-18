@@ -1,11 +1,12 @@
-package com.exemple.bar.service;
+package com.example.bar.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.bar.entity.Chien;
-import com.exemple.bar.repository.ChienRepository;
+import com.example.bar.repository.ChienRepository;
 
 import lombok.Data;
 
@@ -13,6 +14,7 @@ import lombok.Data;
 @Service
 public class ChienService {
 	
+
 	private ChienRepository chienRepository;
 	
 

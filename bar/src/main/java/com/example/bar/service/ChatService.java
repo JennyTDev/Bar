@@ -1,4 +1,4 @@
-package com.exemple.bar.service;
+package com.example.bar.service;
 
 import java.util.Optional;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.bar.entity.Chat;
-import com.exemple.bar.repository.ChatRepository;
+import com.example.bar.repository.ChatRepository;
 
 import lombok.Data;
 
@@ -14,7 +14,7 @@ import lombok.Data;
 @Service
 public class ChatService {
 
-	@Autowired	
+	
 	private ChatRepository chatRepository;
 	
 	public Chat createChat(Chat chat) {

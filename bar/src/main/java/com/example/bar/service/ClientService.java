@@ -1,4 +1,4 @@
-package com.exemple.bar.service;
+package com.example.bar.service;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.bar.entity.Client;
-import com.exemple.bar.repository.ClientRepository;
+import com.example.bar.repository.ClientRepository;
 
 import lombok.Data;
 

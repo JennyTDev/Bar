@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bar.entity.Client;
-import com.exemple.bar.service.ClientService;
+import com.example.bar.service.ClientService;
 
 @RestController
 public class ClientController {

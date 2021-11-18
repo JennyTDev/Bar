@@ -1,4 +1,4 @@
-package com.exemple.bar.service;
+package com.example.bar.service;
 
 import java.util.Optional;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.bar.entity.Gardiennage;
-import com.exemple.bar.repository.GardiennageRepository;
+import com.example.bar.repository.GardiennageRepository;
 
 import lombok.Data;
 

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bar.entity.Chien;
-import com.exemple.bar.service.ChienService;
+import com.example.bar.service.ChienService;
 
 
 @RestController

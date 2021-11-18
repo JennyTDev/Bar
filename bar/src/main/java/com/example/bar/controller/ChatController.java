@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bar.entity.Chat;
 import com.example.bar.exception.ResourceNotFoundException;
-import com.exemple.bar.service.ChatService;
+import com.example.bar.service.ChatService;
 
 @RestController
 @RequestMapping("bar/chat/")
