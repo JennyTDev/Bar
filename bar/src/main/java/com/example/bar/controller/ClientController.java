@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bar.entity.Client;
 import com.example.bar.service.ClientService;
-
+//test
 @RestController
 @RequestMapping("/Bar")
 public class ClientController {
@@ -26,6 +26,7 @@ public class ClientController {
 		return clientService.saveClient(c);
 	}
 	@PutMapping("/Clients")
+	
 	public Client UpdateClient(Client c) {
 		return clientService.update(c);
 	}
